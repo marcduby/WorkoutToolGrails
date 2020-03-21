@@ -13,6 +13,9 @@ environments {
     development {
         dataSource {
 			dbCreate = "update" // "validate" // "update" // one of 'create', 'create-drop','update'
+            url = "jdbc:mysql://localhost/workout?zeroDateTimeBehavior=convertToNull&useUnicode=yes&characterEncoding=UTF-8"
+			username = ""
+            password = ""
 //          dbCreate = "create-drop" // one of 'create', 'create-drop', 'update', 'validate', ''
 //          url = "jdbc:h2:mem:devDb;MVCC=TRUE"
         }
@@ -20,6 +23,9 @@ environments {
     test {
         dataSource {
 			dbCreate = "update" // "validate" // "update" // one of 'create', 'create-drop','update'
+            url = "jdbc:mysql://localhost/workout_test?zeroDateTimeBehavior=convertToNull&useUnicode=yes&characterEncoding=UTF-8"
+			username = ""
+            password = ""
 //            dbCreate = "update"
 //            url = "jdbc:h2:mem:testDb;MVCC=TRUE"
         }
