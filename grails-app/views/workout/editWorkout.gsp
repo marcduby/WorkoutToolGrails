@@ -278,16 +278,23 @@
     <td bgcolor="#ffffcc">
       <table width="100%">
         <tr>
-          <td colspan="2">
+          <td colspan="4">
 		<center><b>Day Attributes</b></center>
           </td>
         </tr>
+
         <tr>
           <td>
 		<b>Heart Rate</b>
           </td>
           <td>
 		<input type="text" class="day" id="heart_rate" name="day.heartRate" value="${workoutBean?.day?.heartRate}" size="5" onFocus="select()">
+          </td>
+          <td>
+		<b>Muscle Soreness</b>
+          </td>
+          <td>
+		<input type="text" class="day" id="muscle_soreness" name="day.heartRate" value="${workoutBean?.day?.heartRate}" size="5" onFocus="select()">
           </td>
         </tr>
         <tr>
@@ -297,6 +304,12 @@
           <td>  
                 <input type="text" class="day" id="sleep_amount" name="day.sleepAmount" value="${workoutBean?.day?.sleepAmount}" size="5" onFocus="select()" >
           </td>
+          <td>  
+                <b>Quality Sleep</b>
+          </td>
+          <td>  
+                <input type="text" class="day" id="sleep_quality" name="day.sleepAmount" value="${workoutBean?.day?.sleepAmount}" size="5" onFocus="select()" >
+          </td>
         </tr> 
         <tr>
           <td>  
@@ -305,6 +318,12 @@
           <td>  
                 <input type="text" class="day" id="feel" name="day.feelRating" value="${workoutBean?.day?.feelRating}" size="5" onFocus="select()" >
           </td>
+          <td>  
+                <b>Motivation</b>
+          </td>
+          <td>  
+                <input type="text" class="day" id="motivation" name="day.feelRating" value="${workoutBean?.day?.feelRating}" size="5" onFocus="select()" >
+          </td>
         </tr> 
         <tr>
           <td>  
@@ -312,6 +331,12 @@
           </td>
           <td>  
                 <input type="text" class="day" id="weight" name="day.weight" value="${workoutBean?.day?.weight}" size="5" onFocus="select()" >
+          </td>
+          <td>  
+                <b>Joints</b>
+          </td>
+          <td>  
+                <input type="text" class="day" id="joints" name="day.weight" value="${workoutBean?.day?.weight}" size="5" onFocus="select()" >
           </td>
         </tr> 
         <tr>
