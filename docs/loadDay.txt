@@ -1,0 +1,2 @@
+
+java -cp .:./mysql-connector-java-5.1.15-bin.jar com.neigesoft.workout.LoadDay

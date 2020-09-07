@@ -1,0 +1,2 @@
+insert into wkt_year (name, name_text, insert_date, last_update, version) values(2021, 'Year 2020 to 2021', sysdate(), sysdate(), 0);
+
