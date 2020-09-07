@@ -278,7 +278,7 @@
     <td bgcolor="#ffffcc">
       <table width="100%">
         <tr>
-          <td colspan="2">
+          <td colspan="4">
 		<center><b>Day Attributes</b></center>
           </td>
         </tr>
@@ -289,15 +289,13 @@
           <td>
 		<input type="text" class="day" id="heart_rate" name="day.heartRate" value="${workoutBean?.day?.heartRate}" size="5" onFocus="select()">
           </td>
-        </tr>
-        <tr>
           <td>  
                 <b>Sleep</b>
           </td>
           <td>  
                 <input type="text" class="day" id="sleep_amount" name="day.sleepAmount" value="${workoutBean?.day?.sleepAmount}" size="5" onFocus="select()" >
           </td>
-        </tr> 
+        </tr>
         <tr>
           <td>  
                 <b>Feel</b>
@@ -305,8 +303,6 @@
           <td>  
                 <input type="text" class="day" id="feel" name="day.feelRating" value="${workoutBean?.day?.feelRating}" size="5" onFocus="select()" >
           </td>
-        </tr> 
-        <tr>
           <td>  
                 <b>Weight</b>
           </td>
@@ -315,7 +311,7 @@
           </td>
         </tr> 
         <tr>
-          <td colspan="2">
+          <td colspan="4">
 		<center><b>Workout Attributes</b></center>
           </td>
         </tr>
@@ -323,7 +319,7 @@
           <td>
                 <b>Time</b>
           </td>
-          <td>
+          <td colspan="3">
             <g:select id="time" from="${0..23}" optionValue="${{(it%12 == 0 ? 12 : it%12) + (it < 12 ? "AM" : "PM")} }" name="hour" value="${workoutBean?.hour}"/>
           </td>
         </tr>
@@ -331,7 +327,7 @@
           <td>
                 <b>Rating</b>
           </td>
-          <td>
+          <td colspan="3">
             <g:select id="rating" from="${1..10}" name="rating" value="${workoutBean?.rating}"/>
           </td>
         </tr>
@@ -339,7 +335,7 @@
           <td>
                 <b>Description</b>
           </td>
-          <td>
+          <td colspan="3">
 	    <textarea name="description" cols="60" rows="5" onFocus="select()">${workoutBean?.description}</textarea>
           </td>
         </tr>
@@ -347,12 +343,12 @@
           <td>
                 <b>Type</b>
           </td>
-          <td>
+          <td colspan="3">
 		<g:select id="workoutTypeId" name="type.id" from="${workoutTypeList}" optionKey="id" optionValue="name" value="${workoutBean?.type?.id}"/>
           </td>
         </tr>
         <tr>
-          <td colspan="2">
+          <td colspan="4">
 		&nbsp;<br>
                 <center><input type="submit" name="enter" value="Submit Changes"></center>
           </td>
