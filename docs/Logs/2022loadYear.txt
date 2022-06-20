@@ -1,0 +1,49 @@
+
+insert into wkt_year(name, name_text, insert_date, version) values(2022, 'Year 2021 to 2022', sysdate(), 0);
+
+pre load:
+---------
++------------------+
+| count(period_id) |
+|              325 |
++------------------+
+| count(week_id) |
+|           1300 |
++----------------+
+| count(day_id) |
+|          9100 |
++---------------+
+| count(workout_id) |
+|             13513 |
++-------------------+
+| count(activity_id) |
+|              13513 |
++--------------------+
+| count(intensity_id) |
+|               13513 |
++---------------------+
+
+post load: 
+----------
++------------------+
+| count(period_id) |
+|              338 |
++----------------+
+| count(week_id) |
+|           1352 |
++---------------+
+| count(day_id) |
+|          9464 |
++-------------------+
+| count(workout_id) |
+|             13877 |
++--------------------+
+| count(activity_id) |
+|              13877 |
++---------------------+
+| count(intensity_id) |
+|               13877 |
++---------------------+
+
+
+

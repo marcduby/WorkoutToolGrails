@@ -1,2 +1,33 @@
 
-java -cp .:./mysql-connector-java-5.1.15-bin.jar com.neigesoft.workout.LoadDay
+javac -d . ../src/java/com/neigesoft/workout/LoadDay.java
+
+// java -cp .:./mysql-connector-java-5.1.15-bin.jar com.neigesoft.workout.LoadDay
+
+// needed for new mysql 8 ssl requirement, character set
+java -cp .:../lib/mysql-connector-java-5.1.45-bin.jar com.neigesoft.workout.LoadDay
+
+mysql> desc wkt_year;
++-------------+-------------+------+-----+-------------------+-----------------------------------------------+
+| Field       | Type        | Null | Key | Default           | Extra                                         |
++-------------+-------------+------+-----+-------------------+-----------------------------------------------+
+| year_id     | mediumint   | NO   | PRI | NULL              | auto_increment                                |
+| name        | mediumint   | NO   |     | 2000              |                                               |
+| name_text   | varchar(20) | NO   |     | Year 0 to 0       |                                               |
+| rating      | mediumint   | NO   |     | 5                 |                                               |
+| notes       | text        | YES  |     | NULL              |                                               |
+| insert_date | date        | YES  |     | NULL              |                                               |
+| last_update | timestamp   | NO   |     | CURRENT_TIMESTAMP | DEFAULT_GENERATED on update CURRENT_TIMESTAMP |
+| version     | bigint      | NO   |     | NULL              |                                               |
++-------------+-------------+------+-----+-------------------+-----------------------------------------------+
+8 rows in set (0.01 sec)
+
++---------+------+-------------------+--------+-------+-------------+---------------------+---------+
+| year_id | name | name_text         | rating | notes | insert_date | last_update         | version |
++---------+------+-------------------+--------+-------+-------------+---------------------+---------+
+|       1 | 1994 | Year 1993 to 1994 |     10 | NULL  | 2001-11-05  | 2001-11-05 14:34:09 |       0 |
+|       2 | 1995 | Year 1994 to 1995 |      8 | NULL  | 2001-11-05  | 2001-11-05 14:34:09 |       0 |
+|
+
+
+insert into wkt_year(name, name_text, insert_date, version) values(2022, 'Year 2021 to 2022', sysdate(), 0);
+
