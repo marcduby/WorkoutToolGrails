@@ -1,0 +1,118 @@
+
+for 2023-2024:
+
+post load:
+----------
+mysql> select count(*) from wkt_period;
++----------+
+| count(*) |
++----------+
+|      364 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from wkt_week;
++----------+
+| count(*) |
++----------+
+|     1456 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from wkt_day;
++----------+
+| count(*) |
++----------+
+|    10192 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from wkt_workout;
++----------+
+| count(*) |
++----------+
+|    15042 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from wkt_activity;
++----------+
+| count(*) |
++----------+
+|    15042 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from wkt_intensity;
++----------+
+| count(*) |
++----------+
+|    15042 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> 
+
+
+pre load:
+---------
+mysql> select count(*) from wkt_period;
++----------+
+| count(*) |
++----------+
+|      351 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from wkt_week;
++----------+
+| count(*) |
++----------+
+|     1404 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from wkt_day;
++----------+
+| count(*) |
++----------+
+|     9828 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from wkt_workout;
++----------+
+| count(*) |
++----------+
+|    14678 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from wkt_activity;
++----------+
+| count(*) |
++----------+
+|    14678 |
++----------+
+1 row in set (0.00 sec)
+
+mysql> select count(*) from wkt_intensity;
++----------+
+| count(*) |
++----------+
+|    14678 |
++----------+
+1 row in set (0.00 sec)
+
+
+
+sql:
+----
+select count(*) from wkt_period;
+select count(*) from wkt_week;
+select count(*) from wkt_day;
+select count(*) from wkt_workout;
+select count(*) from wkt_activity;
+select count(*) from wkt_intensity;
+
+

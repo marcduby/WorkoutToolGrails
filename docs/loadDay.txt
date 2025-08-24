@@ -1,4 +1,7 @@
 
+// in workouttoolsgrails directory 
+cd Temp
+
 javac -d . ../src/java/com/neigesoft/workout/LoadDay.java
 
 // java -cp .:./mysql-connector-java-5.1.15-bin.jar com.neigesoft.workout.LoadDay
@@ -29,5 +32,9 @@ mysql> desc wkt_year;
 |
 
 
+-- 2022
 insert into wkt_year(name, name_text, insert_date, version) values(2022, 'Year 2021 to 2022', sysdate(), 0);
+
+-- 2024
+insert into wkt_year(name, name_text, insert_date, version) values(2024, 'Year 2023 to 2024', sysdate(), 0);
 

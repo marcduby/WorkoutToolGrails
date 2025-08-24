@@ -1,0 +1,7 @@
+
+
+
+- for comparison training for hocr
+  - sum row/erg for year preceding 
+  - sum intensity workouts/races in summer 
+  

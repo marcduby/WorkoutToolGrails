@@ -53,7 +53,9 @@ public class LoadDay {
 //      connection = DriverManager.getConnection(
   //      "jdbc:mysql://10.1.135.188:3306/workout","bob","action");
       connection = DriverManager.getConnection(
-              	"jdbc:mysql://localhost:3306/workout","root","new_password");
+              	// "jdbc:mysql://localhost:3306/workout","root","new_password");
+              	// "jdbc:mysql://localhost:3306/workout?useSSL=false","root","new_password");
+              	"jdbc:mysql://localhost:3306/workout?useSSL=false","root","yoyoma");
     } catch (Exception E) {
       E.printStackTrace();
       System.exit(0);
@@ -286,15 +288,29 @@ public class LoadDay {
 
 //  public static class Load {
     public static void main(String[] args) {
+      // first insert new year
+      // insert into wkt_year (name, name_text, insert_date, version) values('2023', 'Year 2022 to 2023', sysdate(), 0);
+      // insert into wkt_year (name, name_text, insert_date, version) values('2025', 'Year 2024 to 2025', sysdate(), 0);
+      //
       // final String yearName = "2015 to 2016";
       // final String shortYearName = "2016";
       // final int yearId = 23;
       // final String startDate = "2015-08-24";
       // int dayInterval = 0;
-      final String yearName = "2020 to 2021";
-      final String shortYearName = "2021";
-      final int yearId = 28;
-      final String startDate = "2020-08-24";
+      // final String yearName = "2021 to 2022";
+      // final String shortYearName = "2022";
+      // final int yearId = 29;
+      // final String startDate = "2021-08-30";
+      // final String yearName = "2023 to 2024";
+      // final String shortYearName = "2024";
+      // final int yearId = 31;
+      // final String startDate = "2023-08-28";
+
+      final String yearName = "2024 to 2025";
+      final String shortYearName = "2025";
+      final int yearId = 32;
+      final String startDate = "2024-08-26";
+
       int dayInterval = 0;
 
       LoadDay load = new LoadDay();

@@ -1,0 +1,99 @@
+
+
+cd target
+javac -d . ../src/java/com/neigesoft/workout/LoadDay.java
+
+// java -cp .:./mysql-connector-java-5.1.15-bin.jar com.neigesoft.workout.LoadDay
+
+// needed for new mysql 8 ssl requirement, character set
+java -cp .:../lib/mysql-connector-java-5.1.45-bin.jar com.neigesoft.workout.LoadDay
+
+
+new year:
+---------
+final String yearName = "2024 to 2025";
+final String shortYearName = "2025";
+final int yearId = 32;
+final String startDate = "2024-08-26";
+
+
+pre load (2023-2024):
+---------------------
+mysql> select count(*) from wkt_period;
++----------+
+| count(*) |
++----------+
+|      364 |
+
+mysql> select count(*) from wkt_week;
++----------+
+| count(*) |
++----------+
+|     1456 |
+
+mysql> select count(*) from wkt_day;
++----------+
+| count(*) |
++----------+
+|    10192 |
+
+mysql> select count(*) from wkt_workout;
++----------+
+| count(*) |
++----------+
+|    15255 |
+
+mysql> select count(*) from wkt_activity;
++----------+
+| count(*) |
++----------+
+|    15255 |
+
+mysql> select count(*) from wkt_intensity;
++----------+
+| count(*) |
++----------+
+|    15255 |
+
+
+post load (after adding 2024-2025):
+-----------------------------------
+mysql> select count(*) from wkt_period;
++----------+
+| count(*) |
++----------+
+|      377 |
+
+mysql> select count(*) from wkt_week;
++----------+
+| count(*) |
++----------+
+|     1508 |
+
+mysql> select count(*) from wkt_day;
++----------+
+| count(*) |
++----------+
+|    10556 |
+
+mysql> select count(*) from wkt_workout;
++----------+
+| count(*) |
++----------+
+|    15619 |
+
+mysql> select count(*) from wkt_activity;
++----------+
+| count(*) |
++----------+
+|    15619 |
+
+mysql> select count(*) from wkt_intensity;
++----------+
+| count(*) |
++----------+
+|    15619 |
+
+
+
+
